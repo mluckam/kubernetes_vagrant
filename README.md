@@ -25,4 +25,9 @@ To access the dashboard via a browser on the host, use the following command on 
 kubectl proxy --address='<ip>' --port=<port> --disable-filter=true
 ```
 
+Then use go to the following link, replacing \<ip\> and \<port\> with the appropriate values:
+```sh
+http://<ip>:<port>/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+```
+
 When prompted for a Kubeconfig file or Token, use the skip button to bypass authentication.
